@@ -1,0 +1,57 @@
+﻿@page
+@model InventoryTest.Pages.Signup.RegistrationModel
+@{
+}
+
+<div class="container border" style="padding: 20px">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="UserName" class="required-field">Username *</label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="UserName" class="form-control" placeholder="e.g., jdoe" />
+                <span class="text-danger" asp-validation-for="UserName"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Password" class="required-field">Password *</label>
+            </div>
+            <div class="col-5">
+                <input type="password" asp-for="Password" class="form-control" placeholder="e.g., Password123!" />
+                <span class="text-danger" asp-validation-for="Password"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="ConfirmPassword">Confirm Password</label>
+            </div>
+            <div class="col-5">
+                <input type="password" asp-for="ConfirmPassword" class="form-control" />
+                <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Email" class="required-field">Email *</label>
+            </div>
+            <div class="col-5">
+                <input type="email" asp-for="Email" class="form-control" placeholder="e.g., john@johndoe.com" />
+                <span class="text-danger" asp-validation-for="Email"></span>
+            </div>
+        </div>
+
+        <!-- Add other registration fields as needed -->
+
+        <div class="form-group row">
+            <div class="col-2">
+                <label></label> <!-- Empty label for spacing -->
+            </div>
+            <div class="col-5">
+                <input type="submit" class="btn btn-primary" value="Register" />
+            </div>
+        </div>
+    </form>
+</div>
